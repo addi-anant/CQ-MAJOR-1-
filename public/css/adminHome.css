@@ -1,0 +1,37 @@
+.home-outer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 25px;
+  min-height: calc(100vh - 80px);
+}
+
+h1 {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--primary);
+  font-family: "Noto Sans", sans-serif;
+}
+
+.notAuthorized {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--delete);
+}
+
+.add-product-wrapper {
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  justify-content: flex-end;
+}
+
+.form-btn {
+  padding: 10px 6px;
+  font-size: 16px;
+}

@@ -1,0 +1,49 @@
+<div class="wrapper">
+  <div class="orderDetail">
+    <!-- Left Div: -->
+    <div class="productInfo">
+      <% for (var i = 0; i < cart.length; i++) { %>
+      <div class="product">
+        <p class="title"><%= cart[i]?.name %></p>
+        <div class="infomation">
+          <p class="cost">
+            <i class="fa-solid fa-indian-rupee-sign"></i> <%= cart[i]?.price %>
+          </p>
+          <p class="quantity">quantity: <%= cart[i]?.quantity %></p>
+        </div>
+      </div>
+      <% } %>
+      <div class="amount">
+        <p><b>Cart Total:</b> <%= amount %></p>
+      </div>
+    </div>
+
+    <!-- Right Div: -->
+    <div class="shippingInfo">
+      <form class="shipping">
+        <div class="userInfo">
+          <div class="textbox">
+            <label class="label" for="user-name"> Name </label>
+            <input class="text" type="text" name="name" id="user-name" />
+          </div>
+          <div class="textbox">
+            <label class="label" for="user-phone"> Phone No. </label>
+            <input class="text" type="number" name="phone" id="user-phone" />
+          </div>
+          <div class="textbox">
+            <label class="label" for="user-address"> Address </label>
+            <textarea
+              class="text"
+              type="text"
+              name="address"
+              rows="4"
+              id="user-address"></textarea>
+          </div>
+        </div>
+        <button class="order-btn" id="order-btn">Order</button>
+
+        <div id="checkoutErrorMessage"></div>
+      </form>
+    </div>
+  </div>
+</div>

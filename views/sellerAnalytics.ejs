@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seller</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/sellerHome.css" />
+    <link rel="stylesheet" href="/css/ProductList.css" />
+    <link rel="stylesheet" href="/css/sellerProductList.css" />
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- DataTables CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/e0013384a5.js"
+      crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- navbar  -->
+    <%- include('partials/navbar.ejs', {user: user, admin: admin,
+    seller:seller}) %>
+
+    <div class="home-outer">
+      <% if (notAuthorized) { %>
+      <h1 class="notAuthorized">You are not authorized to view this page.</h1>
+      <% } else { %>
+
+      <!-- SELLER HOME:  -->
+      <h1>SELLER Analytics</h1>
+      <div class="add-product-wrapper">
+        <button class="form-btn" id="analytics-btn">Analytics</button>
+        <button class="form-btn" id="new-product-btn">Add Product</button>
+        <button class="form-btn" id="inactive-product-btn">
+          Inactive Product
+        </button>
+      </div>
+
+      <!-- ALL PRODUCTS ASSOCIATED WITH THE SELLER: -->
+      <div class="table-wrapper">
+        <h2>Product Table:</h2>
+
+        <table id="product-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Active</th>
+              <th>Approved</th>
+              <th>Category</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+
+      <!-- ORDER RECIEVED (BY MONTH): -->
+      <div class="table-wrapper">
+        <div class="dropdown-wrapper">
+          <h2>Order Table:</h2>
+          <div>
+            <label for="order-month">Month:</label>
+
+            <select name="order-month" id="order-month">
+              <option value="1">January</option>
+              <option value="2">Feburary</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+          </div>
+        </div>
+        <table id="order-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>UserID</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <% } %>
+
+      <!-- SALE PER MONTH: -->
+      <div id="lineChart" style="min-width: 1400px; height: 500px"></div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('partials/footer.ejs') %>
+
+    <script type="text/javascript" src="/js/auth.js"></script>
+    <script type="text/javascript" src="/js/seller.js"></script>
+    <script type="text/javascript" src="/js/sellerAnalytics.js"></script>
+  </body>
+</html>

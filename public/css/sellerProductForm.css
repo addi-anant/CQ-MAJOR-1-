@@ -1,0 +1,84 @@
+.admin-outer {
+  padding: 25px 50px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--primary);
+  font-family: "Noto Sans", sans-serif;
+}
+
+.admin-form {
+  display: flex;
+  height: max-content;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.form-field {
+  width: 100%;
+  display: flex;
+  margin: 10px 0px;
+  align-items: center;
+}
+
+.label {
+  width: 280px;
+  font-size: 16px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 15px 0px;
+  border-bottom: 1px solid gray;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.form-field > .dropdown {
+  width: 100%;
+}
+
+.form-field > .dropdown > select {
+  padding: 5px 10px;
+}
+
+.input-img {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 15px 0px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.constraint-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.constraint {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 0px;
+}
+
+.constraint-li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  color: var(--delete);
+  padding: 2px 0px;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.form-btn {
+  height: 50px;
+}

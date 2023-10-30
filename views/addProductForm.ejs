@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seller</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/sellerProductForm.css" />
+    <script
+      src="https://kit.fontawesome.com/e0013384a5.js"
+      crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs', {user: user, admin: admin,
+    seller:seller}) %>
+
+    <div class="admin-outer">
+      <h1>Add Product:</h1>
+      <form class="admin-form" enctype="multipart/form-data" id="product-form">
+        <div class="form-field">
+          <label for="name" class="label"> Product Name: </label>
+          <input
+            required
+            autocomplete="off"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Product Name"
+            class="input" />
+        </div>
+
+        <div class="form-field">
+          <label for="description" class="label"> Product Description: </label>
+          <input
+            required
+            autocomplete="off"
+            type="text"
+            name="description"
+            id="description"
+            placeholder="Product Description"
+            class="input" />
+        </div>
+
+        <div class="form-field">
+          <label for="price" class="label"> Product Price: </label>
+          <input
+            required
+            autocomplete="off"
+            type="number"
+            id="price"
+            name="price"
+            placeholder="Product Price"
+            class="input" />
+        </div>
+
+        <div class="form-field">
+          <label for="quantity" class="label"> Product Quantity: </label>
+          <input
+            required
+            autocomplete="off"
+            type="number"
+            id="quantity"
+            name="quantity"
+            placeholder="Product Quantity"
+            class="input" />
+        </div>
+
+        <div class="form-field">
+          <label for="category" class="label"> Product Category: </label>
+          <div class="dropdown">
+            <select id="category" name="category">
+              <option value="clothing">Clothing</option>
+              <option value="accessories">Accessories</option>
+              <option value="footwear">Footwear</option>
+              <option value="furniture">Furniture</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="img" class="label"> Product Image: </label>
+          <input required type="file" id="img" class="input-img" name="file" />
+        </div>
+
+        <div class="constraint-wrapper">
+          <ul class="constraint">
+            <li class="constraint-li">Maximum size: 250kb</li>
+            <li class="constraint-li">Type: .jpeg, .png, .jpg</li>
+          </ul>
+
+          <button type="submit" class="form-btn">Add Product</button>
+        </div>
+
+        <p class="info" id="client-info"></p>
+        <p class="error" id="client-error"></p>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="/js/auth.js"></script>
+    <script type="text/javascript" src="/js/seller.js"></script>
+  </body>
+</html>

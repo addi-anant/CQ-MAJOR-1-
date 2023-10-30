@@ -1,0 +1,20 @@
+<div class="card-container">
+  <% for (var i = 0; i < toBeApproved.length; i++) { %>
+  <div class="card" product_id="<%= toBeApproved[i]?.id %>">
+    <div class="card-top">
+      <img src="<%= toBeApproved[i]?.img %>" />
+    </div>
+    <div class="card-lower-approval">
+      <div class="card-detail-approval">
+        <p class="name"><%= toBeApproved[i]?.name %></p>
+        <p class="cost">
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          <%= toBeApproved[i]?.price %>
+        </p>
+      </div>
+
+      <button class="approve">Approve</button>
+    </div>
+  </div>
+  <% } %>
+</div>

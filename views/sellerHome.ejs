@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seller</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/sellerHome.css" />
+    <link rel="stylesheet" href="/css/ProductList.css" />
+    <link rel="stylesheet" href="/css/sellerProductList.css" />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- DataTables CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" />
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/e0013384a5.js"
+      crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- navbar  -->
+    <%- include('partials/navbar.ejs', {user: user, admin: admin,
+    seller:seller}) %>
+
+    <div class="home-outer">
+      <% if (notAuthorized) { %>
+      <h1 class="notAuthorized">You are not authorized to view this page.</h1>
+      <% } else { %>
+
+      <!-- SELLER HOME:  -->
+      <h1>SELLER Home</h1>
+      <div class="add-product-wrapper">
+        <button class="form-btn" id="analytics-btn">Analytics</button>
+        <button class="form-btn" id="new-product-btn">Add Product</button>
+        <button class="form-btn" id="inactive-product-btn">
+          Inactive Product
+        </button>
+        <button class="form-btn" id="order-request-btn">Order Requests</button>
+      </div>
+
+      <!-- Product List -->
+      <%- include('partials/sellerProductList.ejs') %>
+
+      <!-- NOT APPROVED PRODUCTS: -->
+      <h1>To be Approved Products:</h1>
+      <%- include('partials/notApprovedProductList.ejs', {notApproved:
+      notApproved}) %>
+
+      <!--  -->
+      <% } %>
+    </div>
+
+    <!-- Footer -->
+    <%- include('partials/footer.ejs') %>
+
+    <script type="text/javascript" src="/js/auth.js"></script>
+    <script type="text/javascript" src="/js/seller.js"></script>
+  </body>
+</html>

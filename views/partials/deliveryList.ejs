@@ -1,0 +1,67 @@
+<!-- TO BE APPROVED ORDER LIST: -->
+<div class="wrapper">
+  <h1>To be recieved order:</h1>
+  <div class="order-container" id="approve-list">
+    <% for (var i = 0; i < tobeApprovedOrder.length; i++) { %>
+    <div class="order-wrapper recieved-product-<%=tobeApprovedOrder[i].id%>">
+      <div class="order-info">
+        <p><b>ORDER ID:</b><%=tobeApprovedOrder[i].id%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Name:</b><%=tobeApprovedOrder[i].name%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Phone:</b><%=tobeApprovedOrder[i].phone%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Shipping Address:</b> <%=tobeApprovedOrder[i].address%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Mode of Payment:</b>CASH</p>
+      </div>
+
+      <button class="recieved" id="<%=tobeApprovedOrder[i].id%>">
+        Recieved
+      </button>
+    </div>
+    <% } %>
+  </div>
+</div>
+
+<!-- TO BE FORWARDED ORDER LIST: -->
+<div class="wrapper">
+  <h1>Order Request Dashboard:</h1>
+  <div class="order-container" id="out-for-delivery-list">
+    <% for (var i = 0; i < outForDeliveryOrder.length; i++) { %>
+    <div class="order-wrapper forward-order-<%=outForDeliveryOrder[i].id%>">
+      <div class="order-info">
+        <p><b>ORDER ID:</b><%=outForDeliveryOrder[i].id%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Name:</b><%=outForDeliveryOrder[i].name%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Phone:</b><%=outForDeliveryOrder[i].phone%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Shipping Address:</b> <%=outForDeliveryOrder[i].address%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Mode of Payment:</b>CASH</p>
+      </div>
+
+      <button class="outForDelivery" id="<%=outForDeliveryOrder[i].id%>">
+        Out For Delivery
+      </button>
+    </div>
+    <% } %>
+  </div>
+</div>

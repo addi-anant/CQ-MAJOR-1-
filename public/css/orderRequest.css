@@ -1,0 +1,84 @@
+.home-outer {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+}
+.wrapper {
+  padding: 25px 25px;
+}
+
+.order-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.order-wrapper {
+  padding: 12px;
+  border-radius: 4px;
+  position: relative;
+  padding-bottom: 75px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 6px 0px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.order-info {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.forward,
+.recieved,
+.outForDelivery {
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: var(--primary);
+  font-family: "Noto Sans", sans-serif;
+  border-radius: 100px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+b {
+  padding-right: 4px;
+}
+
+.lower-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+#action-wrapper {
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  width: 350px;
+}
+
+select {
+  margin: 0px;
+  padding: 6px 0px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+select {
+  width: 210px;
+  font-family: "Noto Sans", sans-serif;
+}

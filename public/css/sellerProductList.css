@@ -1,0 +1,142 @@
+.card-container {
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  padding: 25px 0px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.inActive-card-container {
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  padding: 25px 0px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card {
+  width: 100%;
+  border-radius: 10px;
+  height: max-content;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-top {
+  width: 100%;
+  display: flex;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-top > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-detail {
+  padding: 10px 25px 0px 25px;
+}
+
+.form-field {
+  display: flex;
+  margin: 6px 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  width: 120px;
+  font-size: 14px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.input {
+  width: 100%;
+  font-size: 14px;
+  padding: 7px 4px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.dropdown {
+  width: 100%;
+  margin: 0px 4px;
+}
+
+.dropdown > select {
+  padding: 5px 10px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.button-container {
+  gap: 10px;
+  display: flex;
+  padding: 20px 25px;
+}
+
+.button-container > button {
+  width: 100%;
+  border: none;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: var(--primary);
+  font-family: "Noto Sans", sans-serif;
+  border-radius: 100px;
+}
+
+.button-container > button:hover {
+  background-color: var(--secondary);
+}
+
+button.delete-btn {
+  background-color: var(--delete);
+}
+
+button.delete-btn:hover {
+  background-color: var(--delete-secondary);
+}
+
+.input-img {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid var(--icon);
+  font-family: "Noto Sans", sans-serif;
+}
+
+.admin-error {
+  width: 100%;
+  margin: 0px;
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 10px;
+  text-align: center;
+  color: var(--delete);
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* INACTIVE PRODUCT LIST CSS: */
+.table-wrapper {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.dropdown-wrapper {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.dropdown-wrapper > div {
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 32px;
+  color: var(--primary);
+  font-family: "Noto Sans", sans-serif;
+}

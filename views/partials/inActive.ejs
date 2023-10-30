@@ -1,0 +1,24 @@
+<div class="inActive-card-container">
+  <% for (var i = 0; i < inActiveList.length; i++) { %>
+  <div class="card">
+    <div class="card-top">
+      <img src="<%= inActiveList[i]?.img %>" />
+    </div>
+    <div class="card-lower-approval">
+      <div class="card-detail-approval">
+        <p class="name"><%= inActiveList[i]?.name %></p>
+        <p class="cost">
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          <%= inActiveList[i]?.price %>
+        </p>
+      </div>
+
+      <div
+        class="status"
+        onclick="activeProduct('<%=inActiveList[i].id%>', 'this')">
+        Active
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>

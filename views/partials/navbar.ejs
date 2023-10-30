@@ -1,0 +1,66 @@
+<div class="navbar">
+  <p class="navbar-logo">
+    <a href="/" class="link-neutral">ShopKart</a>
+  </p>
+  <div class="navbar-util">
+    <!-- Not Logged In: -->
+    <% if(!user) { %>
+    <div class="control-btn" class="link">
+      <button>
+        <a href="/auth/login" class="link-btn"> Login </a>
+      </button>
+
+      <button>
+        <a href="/auth/register" class="link-btn"> Register </a>
+      </button>
+    </div>
+    <% } %>
+
+    <!-- User: -->
+    <% if(user && !admin && !seller) { %>
+    <div class="control-btn">
+      <!-- USER DASHBOARD: -->
+      <a href="/user/dashboard" class="link-neutral">
+        <div class="user">
+          <p><%= user %></p>
+          <i class="fa-solid fa-user"> </i>
+        </div>
+      </a>
+
+      <!-- CART: -->
+      <a href="/user/cart" class="link-neutral">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+    </div>
+    <% } %>
+
+    <!-- Admin: -->
+    <% if(user && admin && !seller) { %>
+    <div class="control-btn">
+      <button id="admin">Admin</button>
+
+      <div class="user">
+        <p><%= user %></p>
+        <i class="fa-solid fa-user"> </i>
+      </div>
+    </div>
+    <% } %>
+
+    <!-- Seller: -->
+    <% if(user && !admin && seller) { %>
+    <div class="control-btn">
+      <button id="seller">Seller</button>
+
+      <div class="user">
+        <p><%= user %></p>
+        <i class="fa-solid fa-user"> </i>
+      </div>
+    </div>
+    <% } %>
+
+    <!-- LOGOUT: -->
+    <% if(user) { %>
+    <i class="fa-solid fa-right-from-bracket" id="logout"></i>
+    <% } %>
+  </div>
+</div>

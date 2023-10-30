@@ -1,0 +1,150 @@
+.login-outer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+
+.login-container {
+  width: 350px;
+  padding: 30px 40px;
+  height: max-content;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.login-header > h2 {
+  font-size: 28px;
+  margin: 10px 0px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.login-header > p {
+  font-size: 20px;
+  margin: 10px 0px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.login-credential {
+  gap: 20px;
+  display: flex;
+  margin-top: 25px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.login-credential > div {
+  gap: 25px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.login-credential > div > input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 0px;
+  border-bottom: 1px solid gray;
+  font-family: "Noto Sans", sans-serif;
+}
+
+i {
+  font-size: 20px;
+}
+
+.login-container > hr {
+  border: 0.5px solid rgb(238, 238, 238);
+}
+
+.login-container > .wrapper {
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.login-container > .wrapper > p {
+  margin: 6px;
+  padding: 0px;
+}
+
+.constraint {
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.constraint > ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.constraint > ul > li {
+  color: red;
+  padding: 2px 0px;
+  font-size: 11px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* SELLER REGISTER FORM: */
+.seller-register-container {
+  width: 600px;
+  padding: 30px 40px;
+  height: max-content;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.seller-credential {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.seller-credential > div {
+  gap: 25px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.constraint-wrapper {
+  gap: 25px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+}
+
+.seller-credential > div > input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 0px;
+  border-bottom: 1px solid gray;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.seller-register-container > .wrapper {
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.seller-register-container > .wrapper > p {
+  margin: 6px;
+  padding: 0px;
+}

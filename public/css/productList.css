@@ -1,0 +1,183 @@
+.product-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px 25px;
+  position: relative;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-gap: 20px;
+  padding: 25px 0px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card {
+  width: 100%;
+  height: max-content;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-top {
+  width: 100%;
+  display: flex;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-top > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-detail > .name {
+  margin: 0px;
+  padding: 10px 25px 0px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.card-detail > .cost {
+  margin: 0px;
+  padding: 10px 25px 0px 25px;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  font-weight: 400;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.card-lower-approval {
+  display: flex;
+  padding: 10px 5px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-detail-approval {
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 0px;
+}
+
+.card-detail-approval > .name {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.status {
+  margin: 0px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Noto Sans", sans-serif;
+  background-color: red;
+  border-radius: 50px;
+  color: white;
+}
+
+.card-detail-approval > .cost {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  font-weight: 400;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.button-container {
+  gap: 10px;
+  padding: 20px 25px;
+  display: flex;
+}
+
+.button-container > button {
+  width: 100%;
+  border: none;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: var(--primary);
+  font-family: "Noto Sans", sans-serif;
+  border-radius: 100px;
+}
+
+.button-container > button:hover {
+  background-color: var(--secondary);
+}
+
+button.detail-btn {
+  background-color: var(--additional-primary);
+}
+
+button.detail-btn:hover {
+  background-color: var(--additional-secondary);
+}
+
+.cost > i {
+  font-size: 14px;
+  padding: 0px 4px;
+  color: var(--icon);
+}
+
+.modal-wrapper {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.opc {
+  opacity: 0.5;
+}
+
+.pagination-wrapper {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.next {
+  margin: 0px;
+  padding: 0px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.number {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 100%;
+  border: 1px solid black;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.number:hover {
+  background-color: lightgray;
+}
+
+#pagination-counter {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/form.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <script
+      src="https://kit.fontawesome.com/e0013384a5.js"
+      crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs', {user: user, admin: admin,
+    seller:seller}) %>
+
+    <!-- Register Component: -->
+    <div class="login-outer">
+      <div class="seller-register-container">
+        <div class="login-header">
+          <h2>SELLER Sign-up</h2>
+          <p>Buy Smarter, Now!</p>
+        </div>
+        <form class="seller-credential">
+          <!-- NAME: -->
+          <div class="seller-grid-item">
+            <i class="fa-solid fa-user"></i>
+            <input
+              id="register-name"
+              type="text"
+              required
+              autocomplete="off"
+              placeholder="Name" />
+          </div>
+
+          <!-- EMAIL: -->
+          <div class="seller-grid-item">
+            <i class="fa-solid fa-envelope"></i>
+            <input
+              id="register-email"
+              type="email"
+              required
+              autocomplete="off"
+              placeholder="Email" />
+          </div>
+
+          <!-- Phone No: -->
+          <div class="seller-grid-item">
+            <i class="fa-solid fa-phone"></i>
+            <input
+              id="register-phone"
+              type="number"
+              required
+              autocomplete="off"
+              placeholder="Phone" />
+          </div>
+
+          <!-- COMPANY NAME: -->
+          <div class="seller-grid-item">
+            <i class="fa-solid fa-building"></i>
+            <input
+              id="register-company"
+              type="email"
+              required
+              autocomplete="off"
+              placeholder="Company Name" />
+          </div>
+
+          <!-- GST NO: -->
+          <div class="seller-grid-item">
+            <i class="fa-solid fa-hashtag"></i>
+            <input id="register-gst" type="file" required autocomplete="off" />
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="seller-grid-item">
+            <i class="fa-solid fa-lock"></i>
+            <input
+              id="register-password"
+              type="password"
+              required
+              autocomplete="off"
+              placeholder="Password" />
+          </div>
+
+          <!-- <div class="constraint">
+            <ul class="constraint">
+              <li>Min. 8 Character long.</li>
+              <li>Should have atleast one number.</li>
+              <li>Should have atleast lowercase alphabet.</li>
+              <li>Should have atleast uppercase alphabet.</li>
+            </ul>
+
+            <button class="form-btn" type="button" id="seller-register-btn">
+              Register
+            </button>
+          </div> -->
+
+          <p class="info" id="client-info"></p>
+          <p class="error" id="client-error"></p>
+        </form>
+
+        <div class="constraint constraint-wrapper">
+          <ul class="constraint">
+            <li>Min. 8 Character long.</li>
+            <li>Should have atleast one number.</li>
+            <li>Should have atleast lowercase alphabet.</li>
+            <li>Should have atleast uppercase alphabet.</li>
+          </ul>
+
+          <button class="form-btn" type="button" id="seller-register-btn">
+            Register
+          </button>
+        </div>
+
+        <hr />
+        <div class="wrapper">
+          <p>
+            Have an Account?
+            <a href="/auth/seller-login" class="link">Sign-In</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/js/form.js"></script>
+  </body>
+</html>

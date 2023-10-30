@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <h1>Order Request Dashboard:</h1>
+  <div class="order-container">
+    <% for (var i = 0; i < orderList.length; i++) { %>
+    <div class="order-wrapper order-wrapper-<%=orderList[i].id%>">
+      <div class="order-info">
+        <p><b>ORDER ID:</b><%=orderList[i].id%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Name:</b><%=orderList[i].name%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Phone:</b><%=orderList[i].phone%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Shipping Address:</b> <%=orderList[i].address%></p>
+      </div>
+
+      <div class="order-info">
+        <p><b>Mode of Payment:</b>CASH</p>
+      </div>
+
+      <div id="action-wrapper">
+        <p for="order-request-<%=orderList[i].id%>">
+          <b> Product Count: </b>
+        </p>
+
+        <select name="order-request" id="order-request-<%=orderList[i].id%>">
+          <option value="2">Forward Order to Warehouse 1.</option>
+          <option value="4">Forward Order to Warehouse 2.</option>
+          <option value="6">Forward Order to Final Delivery Station.</option>
+        </select>
+      </div>
+
+      <button class="forward" id="<%=orderList[i].id%>">forward</button>
+    </div>
+    <% } %>
+  </div>
+</div>

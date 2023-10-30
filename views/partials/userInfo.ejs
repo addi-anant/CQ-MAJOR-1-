@@ -1,0 +1,95 @@
+<div class="wrapper">
+  <!-- USER INFOMATION DIV: -->
+  <div class="user-info">
+    <!-- Profile Photo: -->
+    <div class="profile-picture">
+      <img id="avatarPic" src="<%= userInfo[0].avatar %>" />
+
+      <form class="form" enctype="multipart/form-data">
+        <label for="avatar" class="update-btn"> Update Profile Picture</label>
+        <input type="file" id="avatar" name="avatar" class="avatar" />
+      </form>
+    </div>
+
+    <!-- Other Information: -->
+    <div class="other-info">
+      <!-- Name: -->
+      <div class="information">
+        <p class="title">Name:</p>
+        <p class="value"><%= userInfo[0].name %></p>
+      </div>
+
+      <!-- Email: -->
+      <div class="information">
+        <p class="title">Email:</p>
+        <p class="value"><%= userInfo[0].email %></p>
+      </div>
+
+      <!-- Password -->
+      <div class="information">
+        <p class="title">Password:</p>
+        <p class="value">*******</p>
+        <button class="update-btn" id="password">Update Password</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- YOUR ORDERS DIV: -->
+  <div class="order-info">
+    <h1>Your orders:</h1>
+
+    <% for (var i = 0; i < orderList.length; i++) { %>
+    <div class="order">
+      <div class="img"><img src="<%= orderList[i].img %>" /></div>
+      <div class="product-info">
+        <div class="information">
+          <p class="title">Name:</p>
+          <p class="value"><%= orderList[i].name %></p>
+        </div>
+
+        <div class="information">
+          <p class="title">Price:</p>
+          <p class="value"><%= orderList[i].price %></p>
+        </div>
+
+        <div class="information">
+          <p class="title">Quantity:</p>
+          <p class="value"><%= orderList[i].quantity %></p>
+        </div>
+
+        <div class="information">
+          <p class="title">Status:</p>
+          <p class="value" id="status-<%=orderList[i].orderID%>">
+            <%= orderList[i].status %>
+          </p>
+        </div>
+
+        <div class="btn">
+          <div class="operation">
+            <button
+              class="cancel-btn button"
+              id="cancel-<%=orderList[i].orderID%>">
+              <%- orderList[i].statusCode === 0 ? 'Cancelled' : 'Cancel Order'
+              %>
+            </button>
+            <button
+              class="track-btn button"
+              id="track-<%=orderList[i].orderID%>">
+              Track Order
+            </button>
+          </div>
+          <button class="view-btn button" id="view-<%=orderList[i].productID%>">
+            View Product
+          </button>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
+
+  <!-- Order Info Modal: -->
+  <div id="order-modal"></div>
+
+  <!-- TIMELINE: -->
+  <div id="timeline-modal"></div>
+</div>

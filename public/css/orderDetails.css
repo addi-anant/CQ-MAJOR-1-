@@ -1,0 +1,139 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 80px);
+}
+
+/* LEFT DIV: */
+.orderDetail {
+  gap: 20px;
+  width: 60%;
+  height: 480px;
+  padding: 40px;
+  display: flex;
+  margin-top: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.productInfo {
+  width: 50%;
+  overflow: scroll;
+  position: relative;
+}
+
+.product {
+  border-bottom: 1px solid black;
+}
+
+.title {
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.infomation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cost {
+  gap: 8px;
+  margin: 0px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.fa-indian-rupee-sign {
+  font-size: 16px;
+}
+
+.quantity {
+  margin: 0px;
+  padding: 10px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.amount {
+  bottom: 00px;
+  width: 100%;
+  display: flex;
+  font-size: 24px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.amount > p {
+  margin: 0px;
+}
+
+/* RIGTH DIV: */
+.shippingInfo {
+  width: 50%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.shipping {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.userInfo {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.textbox {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 18px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.text {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 1px solid black;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.order-btn {
+  border: none;
+  outline: none;
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: black;
+  font-family: "Noto Sans", sans-serif;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+
+#checkoutErrorMessage {
+  width: 100%;
+  color: red;
+  display: flex;
+  font-size: 12px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans", sans-serif;
+}
